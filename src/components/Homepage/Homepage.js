@@ -19,7 +19,7 @@ var color1 = {
 function Homepage() {
     return (
         <>
-
+            
             <header Style="height:100%; margin-top:20vh; z-index:1; background-color:white">
 
                 <div className="container mt-5 text-center">
@@ -28,8 +28,10 @@ function Homepage() {
 
                         <div className="col-lg-6 col-md-12 col-xs-12 mx-4">
                             <div className="contents">
-                                <h2 className="head-title">DoubtOut <br /><small>-A Doubt Solving Platform</small></h2>
-                                <p>Find the best answer to your technical question, help others answer theirs. DoubtOut is a community-based space to find and contribute answers to technical challenges.</p>
+                                <h2 className="head-title">StudentHub <br /><small>-A query solving platform for college students</small></h2>
+                                <p>Find the best answer to your questions.</p>
+                                <br/>
+                                <p>StudentHub is a platform to find and Ask questions related to events,clubs and college in general.</p>
                             </div>
                             <div className="text-left">
                                 <NavLink to="/questions" className="btn btn-primary started-btn">Get Started</NavLink>
@@ -46,14 +48,10 @@ function Homepage() {
                 </div>
 
             </header>
-
-            <footer className="text-center text-lg-start" Style="background-color: #4e63d7; position:absolute; bottom:0vh;width:100%;">
-
-                <div className="text-center text-white p-3" Style="background-color: rgba(0, 0, 0, 0.2);">
-                    © 2023 Made With ❤ DoubtOut
-
+            <footer className="text-center text-lg-start" Style="background-color: #4e63d7; position:absolute; bottom:0vh;width:100%;margin-bottom:1px">
+                <div className="text-center text-white p-3" Style="background-color: rgba(0, 0, 0, 0.2); padding-bottom:0;margin-bottom:1px; ">
+                    StudentHub - Made in 2024 
                 </div>
-
             </footer>
         </>
 

@@ -5,8 +5,8 @@ const fetchuser = require('../middleware/fetchuser');
 const Answer = require("../models/Answer");
 const { route } = require('./questions');
 const User = require("../models/User");
-const LocalStorage = require('node-localStorage').LocalStorage;
-var localStorage = new LocalStorage('./scratch');
+// const LocalStorage = require('node-localStorage').LocalStorage;
+// var localStorage = new LocalStorage('./scratch');
 
 const Question = require("../models/Question");
 const router = express.Router();
@@ -458,7 +458,7 @@ router.post("/acceptanswer/:id", async (req, res) => {
 
 router.post("/points", async (req, res) => {
     try {
-        let username = localStorage.getItem("username");
+        // let username = localStorage.getItem("username");
 
         let answers = await Answer.find({ $and: [{ "postedBy": username }, { "status": "Accepted" }] });
 

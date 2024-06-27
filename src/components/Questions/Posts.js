@@ -98,7 +98,7 @@ export default function Posts({ posts }) {
                                                                           
                                                                             <p>{question.postedBy}</p>
                                                                         </div> */}
-                                    <small className='d-flex flex-row-reverse'>asked {question.date.slice(0, 10)} at {question.date.slice(12, 16)} <p Style="color:#0074CC">{question.postedBy} &nbsp;</p></small>
+                                    <small className='d-flex flex-row-reverse'>asked {question.date.slice(0, 10)} at {question.date.slice(12, 16)} <p Style="color:#0074CC">Student &nbsp;</p></small>
                                 </div>
                             </div>
                         </div>

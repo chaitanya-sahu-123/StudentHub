@@ -1,0 +1,86 @@
+.container {
+    max-width: 1800px;
+    margin: 20px auto;
+    margin-top: 90px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+#boards {
+    display: grid;
+    gap: 20px;
+}
+
+.board {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.board h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.board p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.register-button {
+    background-color: #6a0dad; /* Purple color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+    background-color: #4e0a7d; /* Darker shade of purple on hover */
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+    }
+
+    .board h3 {
+        font-size: 1.5rem;
+    }
+
+    .board p {
+        font-size: 1rem;
+    }
+}

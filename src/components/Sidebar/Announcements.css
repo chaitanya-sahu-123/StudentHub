@@ -1,0 +1,95 @@
+.container {
+    max-width: 2500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    height: 100vh;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+#announcements {
+    display: grid;
+    gap: 20px;
+}
+
+.announcement {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.announcement h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.announcement p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.announcement strong {
+    font-weight: bold;
+    color: #000;
+}
+
+.register-button {
+    background-color: #6a0dad; /* Purple color */
+    color: #fff;
+    border: none;
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+    background-color: #4e0a7d; /* Darker shade of purple on hover */
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+        
+    }
+
+    .header h1 {
+        font-size: 2rem;
+        
+    }
+
+    .header p {
+        font-size: 1rem;
+    }
+
+    .announcement h3 {
+        font-size: 1.5rem;
+    }
+
+    .announcement p {
+        font-size: 1rem;
+    }
+}

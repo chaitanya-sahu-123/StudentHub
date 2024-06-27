@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import parse from "html-react-parser";
 import JoditEditor from "jodit-react";
 import { useNavigate } from 'react-router-dom';
+import './content.css'
 
 export default function Content(props) {
 
@@ -303,19 +304,23 @@ export default function Content(props) {
             )()}
             <div className="container" Style="height:100vh;width:70%;display:block; margin:auto;">
 
-                <div className="d-flex flex-row">
-                    <div className="d-flex flex-column col-md-0 mt-0 mx-0">
-                        <button className='btn btn-white' id="queupvotebtn" onClick={(e) => upvoteQue(e, question._id)} Style="width:15px; border:none;"><i className="fa fa-caret-up" Style="font-size: 35px;"></i></button>
-                        <div className='mx-3'>{queVote}</div>
-                        <button className='btn btn-white' id="quedownvotbtn" onClick={(e) => downvoteQue(e, question._id)} Style="width:15px; border:none;"><i className="fa fa-caret-down" Style="font-size: 35px;"></i></button>
+            <div className="d-flex flex-row">
+                
+    <div className="d-flex flex-column col-md-0 mt-0 mx-0">
+        <button className='btn btn-green' id="queupvotebtn" onClick={(e) => upvoteQue(e, question._id)} style={{ width: '100px', border: '2px solid black', color: 'white' }}>
+            Upvote
+        </button>
+        <div className='mx-3'>{queVote}</div>
+        <button className='btn btn-red' id="quedownvotbtn" onClick={(e) => downvoteQue(e, question._id)} style={{ width: '100px', border: '2px solid black',color:'white' }}>
+           DownVote <i className="fa fa-caret-down" style={{ fontSize: '10px' }}></i>
+        </button>
+    </div>
+    <div className="d-flex flex-column flex-shrink-0 col-md-9 mx-0">
+        <h1>{question.title}</h1>
+        <div className='mt-5'>{html}</div>
+    </div>
+</div>
 
-
-                    </div>
-                    <div className="d-flex flex-column flex-shrink-0 col-md-9 mx-0">
-                        <h1>{question.title}</h1>
-                        <div className='mt-5'>{html}</div>
-                    </div>
-                </div>
                 <hr Style={{
                     background: "black",
                     height: "2px",
@@ -331,9 +336,15 @@ export default function Content(props) {
 
                                 <div className="d-flex flex-row">
                                     <div className="d-flex flex-column col-md-0 mt-0 mx-0">
-                                        <button className='btn btn-white' id={"ansupvotebtn" + ans._id} onClick={(e) => upvote(e, ans._id)} Style="width:15px; border:none;"><i className="fa fa-caret-up" Style="font-size: 35px;"></i></button>
-                                        <div className='mx-3'>{vote[ans._id]}</div>
-                                        <button className='btn btn-white' id = {"ansdownvotebtn" + ans._id} onClick={(e) => downvote(e, ans._id)} Style="width:15px; border:none;"><i className="fa fa-caret-down" Style="font-size: 35px;"></i></button>
+                                    <div className="d-flex flex-column col-md-0 mt-0 mx-0">
+                                <button className='btn btn-green' id={"ansupvotebtn" + ans._id} onClick={(e) => upvoteQue(e, ans._id)} style={{ width: '100px', border: '2px solid black', color: 'white' }}>
+                                    Upvote
+                                </button>
+                                <div className='mx-3'>{queVote}</div>
+                                <button className='btn btn-red' id = {"ansdownvotebtn" + ans._id} onClick={(e) => downvoteQue(e, ans._id)} style={{ width: '100px', border: '2px solid black',color:'white' }}>
+                                DownVote <i className="fa fa-caret-down" style={{ fontSize: '10px' }}></i>
+                                </button>
+                            </div>
                                         {(
                                             () => {
                                                 if (ans.status === "Accepted") {
@@ -345,7 +356,7 @@ export default function Content(props) {
                                     <div className="d-flex flex-column flex-shrink-0 col-md-9 mx-0">
                                         <p>{parse(ans.answer)}</p>
 
-                                        <small className='d-flex flex-row-reverse'>Posted By : {ans.postedBy}</small>
+                                        <small className='d-flex flex-row-reverse'>Posted By : Admin</small>
 
                                         <div className="comments" Style="display:relative; bottom:0px;">
                                             <div className="comment">

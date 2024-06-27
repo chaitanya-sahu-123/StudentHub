@@ -15,7 +15,7 @@ export default function Footer() {
         <footer className="text-center text-lg-start bg-primary" Style="position:fixed; bottom:0px;width:100%;">
 
             <div className="text-center p-3 fs-5">
-                <NavLink to="/" Style="text-decoration:none;">
+                <NavLink to="/" Style="text-decoration:none;padding-bottom:0;margin-bottom:0;border-bottom:0">
                     &nbsp;<i Style={title}>Doubt</i><b Style="color:black;">Out</b>
                 </NavLink>
 

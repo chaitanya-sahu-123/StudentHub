@@ -26,6 +26,9 @@ import AdminQuestions from './components/Admin/Adminquestion';
 import AdminHome from './components/Admin/AdminHome';
 import Adminanswer from './components/Admin/AdminAnswer';
 import UserProfileAnalysis from './components/Admin/Analysis/UserProfileAnalysis';
+import Announcements from './components/Sidebar/announcements';  // Import Announcements component
+import Clubs from './components/Sidebar/Clubs';
+import Boards from './components/Sidebar/Boards';
 
 function App() {
   return (
@@ -34,20 +37,19 @@ function App() {
       <Navbar />
       <Routes>
 
-        <Route path = "/" element = {<Homepage/>}/>
-     
-        <Route path = "/editor" element = {<Editor/>}/>
-        <Route path = "/login" element = {<Login/>}/>
-        <Route path = "/register" element = {<Register/>}/>
-        <Route path="/questions" element = {<Questions />}></Route>
-        <Route path="/question/:type" element = {<Content />}></Route>
-        <Route path="/answer/:type" element = {<UserQuestionContent />}></Route>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/editor" element={<Editor />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/questions" element={<Questions />}></Route>
+        <Route path="/question/:type" element={<Content />}></Route>
+        <Route path="/answer/:type" element={<UserQuestionContent />}></Route>
        
        {/* profile routes */}
         <Route path='/chart' element={<Chart />}></Route>
         <Route path='/profile' element={<Profile />}></Route>
         <Route path='/myquestions' element={<MyQuestions />}></Route>
-        <Route path='/updateque/:type' element = {<UpdateQuestion/>}/>
+        <Route path='/updateque/:type' element={<UpdateQuestion />}/>
         <Route path='/myanswers' element={<MyAnswers />}></Route>
         <Route path='/analysis' element={<Analysis />}></Route>
         <Route path="/tags" element={<Tags />}></Route>
@@ -55,15 +57,15 @@ function App() {
         {/* admin routes  */}
         <Route path='/adminHome' element={<AdminHome />}></Route>
         <Route path='/adminuser' element={<AdminUser />}></Route>
-        <Route path='/adminanalysis' element={<AdminAnalysis/>}> </Route>
+        <Route path='/adminanalysis' element={<AdminAnalysis />}> </Route>
         <Route path='/adminquestions' element={<AdminQuestions />}></Route>
         <Route path='/adminanswer' element={<Adminanswer />}></Route>
         <Route path='/admin' element={<Admin />}></Route>
         <Route path='/UserProfileAnalysis/:username' element={<UserProfileAnalysis />}></Route>
         
         <Route path='/myquestions' element={<MyQuestions />}></Route>
-        <Route path='/updateque/:type' element = {<UpdateQuestion/>}/>
-        <Route path='/updateans/:type' element= {<UpdateAnswer/>}></Route>
+        <Route path='/updateque/:type' element={<UpdateQuestion />}/>
+        <Route path='/updateans/:type' element={<UpdateAnswer />}></Route>
         <Route path='/myanswers' element={<MyAnswers />}></Route>
         <Route path='/analysis' element={<Analysis />}></Route>
         <Route path="/tags" element={<Tags />}></Route>
@@ -71,12 +73,16 @@ function App() {
         {/* <Route path="/tags" element={<Tags />}></Route> */}
 
         {/* tags routers */}
-        <Route path='/tags' element= {<Tags />}></Route>
-        <Route path = '/questionOntags/:type' element = {<QuestionOnTags/>}></Route>
+        <Route path='/tags' element={<Tags />}></Route>
+        <Route path='/questionOntags/:type' element={<QuestionOnTags />}></Route>
 
         {/* Search Question */}
-        <Route path = "/search" element={<Search/>}></Route>
+        <Route path="/search" element={<Search />}></Route>
         
+        {/* Announcements route */}
+        <Route path="/announcements" element={<Announcements />} />
+        <Route path="/clubs" element={<Clubs />} />
+        <Route path="/boards" element={<Boards />} />
         
       </Routes>
       {/* <Footer /> */}

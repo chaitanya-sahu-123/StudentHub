@@ -3,8 +3,8 @@ const Admin = require("../models/Admin");
 const User = require("../models/User");
 const router = express.Router();
 
-const LocalStorage = require('node-localStorage').LocalStorage;
-var localStorage = new LocalStorage('./scratch');
+// const LocalStorage = require('localStorage').LocalStorage;
+// var localStorage = new LocalStorage('./scratch');
 
 const { body, validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
@@ -37,7 +37,7 @@ router.post('/createuser', [
 
         let user = await Admin.findOne({ email: req.body.email });
         if (user) {
-            return res.status(400).json({ error: "Sorry a user with this email already exist" })
+            return res.status(400).json({ error: "Sorry, a user with this email already exists" })
         }
 
         const salt = await bcrypt.genSalt(10);
@@ -60,8 +60,8 @@ router.post('/createuser', [
         console.log(data);
         const authtaken = jwt.sign(data, JWT_SECRET);
 
-        localStorage.setItem('token', authtaken);
-        localStorage.setItem('username', req.body.username);
+        // localStorage.setItem('token', authtaken);
+        // localStorage.setItem('username', req.body.username);
         res.json({ 'success': authtaken, 'username': req.body.username });
         // res.json({autotaken});
     }

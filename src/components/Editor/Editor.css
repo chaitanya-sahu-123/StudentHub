@@ -1,0 +1,12 @@
+.card-title {
+    font-size: 22px; /* Adjust the size as needed */
+    color: #ff0000; /* Red color for warning */
+    background-color: #fff3cd; /* Light yellow background */
+    padding: 10px 15px; /* Padding for spacing */
+    border: 1px solid #baffea; /* Light yellow border */
+    border-radius: 4px; /* Rounded corners */
+    margin: 10px 0; /* Margin for spacing */
+    text-align: center; /* Center text */
+    font-weight: bold; /* Bold text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}

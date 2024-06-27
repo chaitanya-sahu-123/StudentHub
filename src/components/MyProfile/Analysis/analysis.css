@@ -1,23 +1,190 @@
-.charts{
-    display:block;
-    padding:50px;
+/* Global styles for light and dark modes */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
-.title_row1{
-    display: block;
+
+body.light-mode {
+    background-color: #f9f9f9;
+    color: #333;
 }
-.title1{
-    position: absolute;
-    right:  47%;
-    top:27%; 
+
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #fff;
 }
-.title2{
-    position: absolute;
-    right: 27%;
-}
-.first_row{
+
+.container {
     display: flex;
+    height: 100vh;
+    margin-top: 13vh;
+    background-color: white;
 }
-.last_chart{
-    margin-top: 3%;
-    margin-left: 25%;
+
+.header_and_content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: auto;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for content */
+}
+
+.filters_menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px; /* Increased spacing for better readability */
+}
+
+.filters_menu input[type="date"] {
+    margin: 0 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #eaeaea; /* Light gray background for inputs */
+    color: #333; /* Dark text color */
+}
+
+.title_row1 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Increased spacing below titles */
+}
+
+/* Charts and Visualizations */
+.charts {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #f0f0f0; /* Light gray background for charts */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.first_row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Increased spacing between rows of charts */
+}
+
+.last_chart {
+    margin-top: 20px;
+    align-self: center;
+}
+
+/* Title styles */
+.title1, .title2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.title1 {
+    color: #6a0dad; /* Purple color */
+}
+
+.title2 {
+    color: #343a40; /* Dark gray color */
+}
+
+/* Buttons */
+.register-button, .learn-more-btn {
+    background-color: #6a0dad;
+    color: #fff;
+    border: none;
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-button:hover, .learn-more-btn:hover {
+    background-color: #4e0a7d; /* Darker shade of purple on hover */
+}
+
+/* Announcement styles */
+.announcement {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.announcement:hover {
+    transform: translateY(-5px); /* Slight lift on hover for interactivity */
+}
+
+.announcement h3 {
+    font-size: 1.8rem;
+    color: #6a0dad; /* Purple color for titles */
+    margin-bottom: 10px;
+}
+
+.announcement p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.dark-mode .container {
+    background-color: #2c2c2c;
+    color: #fff;
+}
+
+.dark-mode .header_and_content {
+    background-color: #333;
+}
+
+.dark-mode .filters_menu input[type="date"] {
+    background-color: #555;
+    color: #fff;
+    border-color: #777;
+}
+
+.dark-mode .charts {
+    background-color: #444;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .announcement {
+    background-color: #555;
+    color: #ddd;
+}
+
+.dark-mode .title1 {
+    color: #bb86fc; /* Lighter purple for dark mode */
+}
+
+.dark-mode .title2 {
+    color: #ccc;
+}
+
+.dark-mode .register-button, .dark-mode .learn-more-btn {
+    background-color: #bb86fc; /* Lighter purple for buttons in dark mode */
+}
+
+.dark-mode .register-button:hover, .dark-mode .learn-more-btn:hover {
+    background-color: #9a6bcc; /* Slightly darker shade on hover */
+}
+
+@media (max-width: 768px) {
+    .filters_menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filters_menu input[type="date"] {
+        margin: 5px 0;
+    }
+
+    .first_row {
+        flex-direction: column;
+        align-items: center;
+    }
 }

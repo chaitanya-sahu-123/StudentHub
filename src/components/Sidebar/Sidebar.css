@@ -1,90 +1,129 @@
+:root {
+   --primary-color: #6a0dad; /* Purple */
+   --text-color: #000; /* Black */
+   --background-color: #fff; /* White */
+   --border-color: #ddd; /* Light Gray for borders */
+   --hover-background-color: #f3f3f3; /* Light Gray for hover background */
+   --button-background: #eee; /* Light background for buttons */
+   --button-hover-background: #d1c4e9; /* Light purple for button hover */
+}
+
+body {
+   font-family: Arial, sans-serif;
+   color: var(--text-color);
+   background-color: var(--background-color);
+   font-size: 16px; /* Increased base font size */
+}
+
 .stack-index {
-    display: flex;
-    min-height: 85vh;
-    min-width:  fit-content;
+   display: flex;
+   min-height: 85vh;
+   min-width: fit-content;
+   background-color: var(--background-color);
+   padding: 20px; /* Added padding for spacing */
 }
 
 .stack-index-content {
-    display:flex;
-    width: 100%;
-    justify-content: center;
-    margin-left: -25px;
-    margin-right: -25px;
-   }
+   display: flex;
+   width: 100%;
+   justify-content: center;
+   margin: 0 -25px;
+   background-color: var(--background-color);
+}
 
 /* sidebar.js file css */
-.sidebar{
-    display:flex;
-    padding: 20px 0px 10px 10px;
-    height: 100%;
-    flex: 0.5;
-    max-width: 200px;
-    border-right: 1px solid #ddd;
+.sidebar {
+   display: flex;
+   padding: 20px 10px;
+   height: 100%;
+   flex: 0.5;
+   max-width: 220px; /* Increased max-width for better spacing */
+   border-right: 1px solid var(--border-color);
+   background-color: var(--background-color);
 }
 
-.sidebar-container{
-    margin: 10px 0;
-    display:flex;
-    width:100%;
+.sidebar-container {
+   margin: 20px 0; /* Increased margin for better spacing */
+   display: flex;
+   width: 100%;
 }
+
 .sidebar-options {
    display: flex;
-    flex-direction: column;
-    width: 200px;
+   flex-direction: column;
+   width: 100%;
 }
+
 .sidebar-option {
-    display: flex;
-     flex-direction: column;
-     margin: 10px 0;
-     font-size: 14px;
- }
+   display: flex;
+   flex-direction: column;
+   margin: 15px 0; /* Increased margin for better spacing */
+   font-size: 16px; /* Increased font size */
+}
 
- a{
-    text-decoration: none;
-    color: #000;
- }
+a {
+   text-decoration: none;
+   color: var(--text-color);
+   transition: color 0.3s ease, background-color 0.3s ease;
+   font-size: 16px; /* Increased font size */
+}
 
- a:hover {
-    color:#000;
- }
+a:hover {
+   color: var(--primary-color);
+   background-color: var(--hover-background-color);
+}
 
- .sidebar-option >p {
-    color:#000;
-    font-size: 14px;
- }
+.sidebar-option > p {
+   color: var(--text-color);
+   font-size: 16px; /* Increased font size */
+}
 
- .link{
-    display: flex;
-    flex-direction: column;
- }
+.link {
+   display: flex;
+   flex-direction: column;
+}
 
- .link-tag{
-    display: flex;
-     align-content: center;
-    padding: 5px 0;
-    width: 100%
- }
+.link-tag {
+   display: flex;
+   align-items: center;
+   padding: 10px 15px; /* Increased padding for better spacing */
+   width: 100%;
+   background-color: var(--button-background); /* Button background */
+   border-radius: 4px; /* Rounded corners */
+   transition: border-right 0.3s ease, background-color 0.3s ease;
+   cursor: pointer; /* Pointer cursor for button-like feel */
+   margin: 5px 0; /* Margin between buttons */
+}
 
- .link-tag:hover{
-    border-right: 5px solid #0D6EFD;
- }
+.link-tag:hover {
+   border-right: 5px solid var(--primary-color);
+   background-color: var(--button-hover-background); /* Button hover background */
+}
 
- .link-tag > .MuiSvgIcon-root{
-    font-size: 18px;
-    margin-right: 5px;
-    color: #0D6EFD;
- }
+.link-tag > .MuiSvgIcon-root {
+   font-size: 20px; /* Slightly increased icon size */
+   margin-right: 10px; /* Increased margin for better spacing */
+   color: var(--primary-color);
+}
 
- .tags{
-    display: flex;
-    flex-direction: column;
-    color:#000;
-    margin: 0px 20px;
- }
- .tags>p{
+.tags {
+   display: flex;
+   flex-direction: column;
+   color: var(--text-color);
+   margin: 0 20px;
+}
 
-    margin: 5px 0;
- }
- .tags > p:hover{
-    color: #000;
- }
+.tags > p {
+   margin: 10px 0; /* Increased margin for better spacing */
+   font-size: 16px; /* Increased font size */
+   transition: color 0.3s ease, background-color 0.3s ease;
+   padding: 10px 15px; /* Padding for button-like feel */
+   background-color: var(--button-background); /* Button background */
+   border-radius: 4px; /* Rounded corners */
+   cursor: pointer; /* Pointer cursor for button-like feel */
+}
+
+.tags > p:hover {
+   color: var(--primary-color);
+   background-color: var(--button-hover-background); /* Button hover background */
+}

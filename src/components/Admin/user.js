@@ -97,7 +97,7 @@ export default function AdminUser() {
                     <tr>
                       {/* <th scope="row">{user.id}</th> */}
                       <td style={{ width: '250px',textAlign:'center', height: '40px' }} >
-                        <button className='btn btn-outline-primary' style={{ width: '150px', height: '40px' }}><NavLink to={{ pathname: `/UserProfileAnalysis/${user.username}`}}>{user.username}</NavLink></button>
+                        <button className='btn btn-outline-primary' style={{ width: '150px', height: '40px' }}><NavLink to={{ pathname: `/UserProfileAnalysis/${user.username}`}}>{user.username}</NavLink>User profile Analysis</button>
                       </td>
                       <td  style={{ width: '250px',textAlign:'center', height: '40px' }}>{user.email}</td>
                       <td style={{ width: '250px',textAlign:'center', height: '40px' }}>
