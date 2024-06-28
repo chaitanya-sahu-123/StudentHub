@@ -108,7 +108,7 @@ function Register() {
             </div>
           </form>
           <div className="signup">Already Have Acount?
-            <NavLink to="/login">Sigin Now</NavLink>
+            <NavLink to="/login">Sign-in Now</NavLink>
           </div>
         </div>
       </div>
